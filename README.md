@@ -40,15 +40,21 @@ There is already some basic setup presented (feel free to modify it though):
 - react-router configured to handle 2 paths: `/campaigns` (Home page) and `/campaigns/:id` 
 (Campaign page).
 - redux store configuration in `store.js` module with base setup.
-- `action.js` module contains action creator that is supposed to fetch campaigns data from the 
-server.
+- `action.js` module contains action creator that fetch campaigns data from the server. You can
+add your action creators here.
 
 ## Task
-Your task is to implement missing pieces - perform action network requests for fetching data, store
-it in redux store and display for user. Your task is also apply some CSS to make this interfaces 
-looks nice.
+Your task is to implement missing pieces:
+- perform action network requests for fetching categories and products data
+- store data in redux store (complete reducers)
+- display data for user
+- handle user interactions: click on campaign row in campaigns table should redirect browser on 
+Campaign page.
+- there is no design defined for this task, so your goal is to build simple CSS to represent data 
+in nice way.
 
-Unit tests would be nice but not required, you can see example of one in `Home.test.js`.
+Unit tests would be nice but **not** required, you can see example of one in `Home.test.js`.
+
 
 ## Available Scripts
 

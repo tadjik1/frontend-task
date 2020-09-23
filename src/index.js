@@ -10,8 +10,6 @@ import App from './App';
 import Home from './Home';
 import Campaign from './Campaign';
 
-import './index.css';
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
