@@ -1,10 +1,10 @@
 # SO1 Frontend Task
 
-In this task your goal is to build a simple interface that displays marketing campaigns in 
-convenient way. Application contains 2 pages: Home and Campaign. 
+In this task, your goal is to build a simple interface that displays marketing campaigns. The 
+application contains 2 pages: Home and Campaign. 
 
 ## Home page
-Home page displays table that contains all campaigns in this form:
+Home page displays a table that contains all campaigns in this form:
 
 | name       | budget | products |
 |------------|--------|----------|
@@ -14,7 +14,8 @@ Home page displays table that contains all campaigns in this form:
 | ...        | ...    | ...      |
 
 ## Campaign page
-Campaign page displays campaign information (`id`, `name`, `budget`) and table with products data:
+Campaign page displays campaign information (`id`, `name`, `budget`) and the table with products 
+data:
 
 | name       | price | category    |
 |------------|-------|-------------|
@@ -24,8 +25,8 @@ Campaign page displays campaign information (`id`, `name`, `budget`) and table w
 | ...        | ...   | ...         |
 
 ## Data
-Data is available on server which is already implemented in this repo, you can launch it before 
-using by running `npm run server` command. Server returns all data in JSON format and has 
+Data is available on the server which is already implemented in this repo, you can launch it before 
+using by running the `npm run server` command. The server returns all data in JSON format and has 
 following endpoints:
 
 | method | path               | description            |
@@ -40,7 +41,7 @@ There is already some basic setup presented (feel free to modify it though):
 - react-router configured to handle 2 paths: `/campaigns` (Home page) and `/campaigns/:id` 
 (Campaign page).
 - redux store configuration in `store.js` module with base setup.
-- `action.js` module contains action creator that fetch campaigns data from the server. You can
+- `action.js` module contains an action creator that fetch campaign data from the server. You can
 add your action creators here.
 
 ## Task
@@ -48,12 +49,12 @@ Your task is to implement missing pieces:
 - perform action network requests for fetching categories and products data
 - store data in redux store (complete reducers)
 - display data for user
-- handle user interactions: click on campaign row in campaigns table should redirect browser on 
-Campaign page.
+- handle user interactions: click on the campaign row in the campaigns table should redirect the 
+browser on Campaign page.
 - there is no design defined for this task, so your goal is to build simple CSS to represent data 
-in nice way.
+nice.
 
-Unit tests would be nice but **not** required, you can see example of one in `Home.test.js`.
+Unit tests would be nice but **not** required, you can see an example of one in `Home.test.js`.
 
 
 ## Available Scripts
@@ -62,7 +63,7 @@ In the project directory, you can run:
 
 ### `npm run server`
 
-Runs the server for fetching data. You can access server by issuing requests to 
+Runs the server for fetching data. You can access the server by issuing requests to 
 `http://localhost:8080/api`. Please check REST API specification [here](#data). 
 
 ### `npm start`
