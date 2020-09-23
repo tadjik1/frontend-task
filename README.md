@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SO1 Frontend Task
+
+In this task your goal is to build a simple interface that displays marketing campaigns in 
+convenient way. Application contains 2 pages: Home and Campaign. 
+
+## Home page
+Home page displays table that contains all campaigns in this form:
+
+| name       | budget | products |
+|------------|--------|----------|
+| Campaign 1 | 216    | 24       |
+| Campaign 2 | 450    | 36       |
+| Campaign 3 | 812    | 30       |
+| ...        | ...    | ...      |
+
+## Campaign page
+Campaign page displays campaign information (`id`, `name`, `budget`) and table with products data:
+
+| name       | price | category    |
+|------------|-------|-------------|
+| Product 1  | 4     | Category 15 |
+| Product 2  | 19    | Category 82 |
+| Product 3  | 10    | Category 4  |
+| ...        | ...   | ...         |
+
+## Data
+Data is available on server which is already implemented in this repo, you can launch it before 
+using by running `npm run server` command. Server returns all data in JSON format and has 
+following endpoints:
+
+| method | path               | description            |
+|--------|--------------------|------------------------|
+| GET    | /api/campaigns     | Get list of campaigns  |
+| GET    | /api/campaigns/:id | Get campaign by id     |
+| GET    | /api/categories    | Get list of categories |
+| GET    | /api/products      | Get list of products   |
+
+## Current state 
+There is already some basic setup presented (feel free to modify it though):
+- react-router configured to handle 2 paths: `/campaigns` (Home page) and `/campaigns/:id` 
+(Campaign page).
+- redux store configuration in `store.js` module with base setup.
+- `action.js` module contains action creator that is supposed to fetch campaigns data from the 
+server.
+
+## Task
+Your task is to implement missing pieces - perform action network requests for fetching data, store
+it in redux store and display for user. Your task is also apply some CSS to make this interfaces 
+looks nice.
+
+Unit tests would be nice but not required, you can see example of one in `Home.test.js`.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm run server`
+
+Runs the server for fetching data. You can access server by issuing requests to 
+`http://localhost:8080/api`. Please check REST API specification [here](#data). 
+
 ### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Launches the test runner in the interactive watch mode.

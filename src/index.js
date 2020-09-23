@@ -1,12 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from './store';
 import * as serviceWorker from './serviceWorker';
+
+import App from './App';
+import Home from './Home';
+import Campaign from './Campaign';
+
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Provider store={store}>
+        <App>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/campaign/:id">
+              <Campaign />
+            </Route>
+          </Switch>
+        </App>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
