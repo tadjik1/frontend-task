@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <button onClick={() => fetchCampaigns(dispatch)}>Load Campaigns data</button>
+      <button onClick={() => dispatch(fetchCampaigns())}>Load Campaigns data</button>
     </div>
   );
 }
