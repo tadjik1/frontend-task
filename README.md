@@ -40,7 +40,7 @@ following endpoints:
 
 ## Current state 
 There is already some basic setup presented (feel free to modify it though):
-- react-router configured to handle 2 paths: `/campaigns` (Home page) and `/campaigns/:id` 
+- react-router configured to handle 2 paths: `/` (Home page) and `/campaigns/:id` 
 (Campaign page).
 - redux store configuration in `store.js` module with base setup.
 - `action.js` module contains an action creator that fetch campaign data from the server. You can
