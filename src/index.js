@@ -19,7 +19,7 @@ ReactDOM.render(
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/campaign/:id">
+            <Route path="/campaigns/:id">
               <Campaign />
             </Route>
           </Switch>
