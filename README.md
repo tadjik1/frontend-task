@@ -1,7 +1,9 @@
 # SO1 Frontend Task
 
-In this task, your goal is to build a simple interface that displays marketing campaigns. The 
-application contains 2 pages: Home and Campaign. 
+In this task, you will be building a simple interface for a marketing/campaign manager at a 
+major grocery retailer. It is the campaign managers job to choose and execute different marketing 
+campaigns which affect the price of the corresponding products. The application that the campaign 
+manager uses contains 2 pages: Home and Campaign.
 
 ## Home page
 Home page displays a table that contains all campaigns in this form:
@@ -47,12 +49,10 @@ add your action creators here.
 ## Task
 Your task is to implement missing pieces:
 - perform action network requests for fetching categories and products data
-- store data in redux store (complete reducers)
+- store data in redux store (complete actions & reducers)
 - display data for user
-- handle user interactions: click on the campaign row in the campaigns table should redirect the 
-browser on Campaign page.
-- there is no design defined for this task, so your goal is to build simple CSS to represent data 
-nice.
+- handle user interactions: clicking on the campaign row in the campaign's table should redirect the browser to the Campaign page.
+- there is no design defined for this task, so your goal is to build simple CSS to represent data nicely.
 
 Unit tests would be nice but **not** required, you can see an example of one in `Home.test.js`.
 
